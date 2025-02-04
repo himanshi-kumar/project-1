@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mausam - Sign Up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2c3e50;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-side {
+            flex: 1;
+            background: #0a1629;
+            padding: 40px;
+            position: relative;
+            color: white;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo-icon {
+            display: inline-block;
+        }
+
+        .welcome-text {
+            margin-top: 60px;
+        }
+
+        .welcome-text h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .welcome-text p {
+            font-size: 24px;
+            opacity: 0.9;
+        }
+
+        .illustration {
+            position: relative;
+            height: 300px;
+            margin-top: 40px;
+        }
+
+        .rocket-rider {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .cloud {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            animation: drift 8s linear infinite;
+        }
+
+        .cloud:nth-child(1) {
+            width: 100px;
+            height: 40px;
+            top: 20%;
+            left: -100px;
+            animation-delay: 0s;
+        }
+
+        .cloud:nth-child(2) {
+            width: 80px;
+            height: 30px;
+            top: 50%;
+            left: -80px;
+            animation-delay: 2s;
+        }
+
+        .cloud:nth-child(3) {
+            width: 120px;
+            height: 45px;
+            top: 70%;
+            left: -120px;
+            animation-delay: 4s;
+        }
+
+        .dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        .dot1 {
+            background: #ff6b6b;
+            top: 20%;
+            left: 20%;
+        }
+
+        .dot2 {
+            background: #4ecdc4;
+            top: 40%;
+            right: 30%;
+            animation-delay: 0.5s;
+        }
+
+        .dot3 {
+            background: #ffe66d;
+            top: 70%;
+            left: 40%;
+            animation-delay: 1s;
+        }
+
+        .dot4 {
+            background: #7f8c8d;
+            top: 30%;
+            right: 20%;
+            animation-delay: 1.5s;
+        }
+
+        .right-side {
+            flex: 1;
+            padding: 40px;
+            background: white;
+        }
+
+        .language-selector {
+            text-align: right;
+            margin-bottom: 40px;
+        }
+
+        .language-selector select {
+            border: none;
+            background: transparent;
+            font-size: 16px;
+            color: #666;
+            cursor: pointer;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #0a1629;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #e1e1e1;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #4ecdc4;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #0a1629;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(10, 22, 41, 0.2);
+        }
+
+        .divider {
+            text-align: center;
+            margin: 20px 0;
+            color: #666;
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-button {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #e1e1e1;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .social-button:hover {
+            background-color: #f8f9fa;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .login-link a {
+            color: #0a1629;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) translateX(-50%);
+            }
+
+            50% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+        }
+
+        @keyframes drift {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(calc(100vw + 200px));
+            }
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left-side {
+                padding: 20px;
+            }
+
+            .right-side {
+                padding: 20px;
+            }
+
+            .illustration {
+                height: 200px;
+            }
+
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="logo">
+                MAUSAM <span class="logo-icon">🌤</span>
+            </div>
+            <div class="welcome-text">
+                <h1>Welcome!</h1>
+                <p>TO MAUSAM</p>
+            </div>
+            <div class="illustration">
+                <div class="cloud"></div>
+                <div class="cloud"></div>
+                <div class="cloud"></div>
+                <div class="dot dot1"></div>
+                <div class="dot dot2"></div>
+                <div class="dot dot3"></div>
+                <div class="dot dot4"></div>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="en">English</option>
+                </select>
+            </div>
+            <h2>Create Account</h2>
+            <form id="signup-form" method="post">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Full Name" name="name">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="E-Mail" name="email">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" name="password">
+                </div>
+                <button type="submit">Create Account</button>
+            </form>
+            <div class="divider">OR</div>
+            <div class="social-buttons">
+                <div class="social-button" id="google-signin">
+                    <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
+                        alt="Google">
+                    Sign in with Google
+                </div>
+                <div class="social-button" id="apple-signin">
+                    <img src="https://images.vexels.com/media/users/3/139567/isolated/lists/582aca4000ab46231333a1df893c947e-apple-logo.png"
+                        alt="Apple">
+                    Sign in with Apple Id
+                </div>
+            </div>
+            <div class="login-link">
+                Already have an account? <a href="../html/loginpage.html">Log In</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Form Validation
+        document.getElementById('signup-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (!name || !email || !password) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+
+        });
+
+        // Email Validation Function
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+
+        // Language Selector
+        document.getElementById('language-select').addEventListener('change', function () {
+            const selectedLanguage = this.value;
+            alert(`Language changed to: ${selectedLanguage}`);
+            // Additional logic to change page content language can go here
+        });
+
+        // Social Sign-In Placeholder
+        document.getElementById('google-signin').addEventListener('click', function () {
+            alert('Redirecting to Google Sign-In...');
+        });
+
+        document.getElementById('apple-signin').addEventListener('click', function () {
+            alert('Redirecting to Apple Sign-In...');
+        });
+
+        //getting the initial value from the localStorage
+        let allSignUpDataArray =
+            JSON.parse(localStorage.getItem("signupData")) || [];
+        const formElement = document.getElementById("signup-form");
+        formElement.addEventListener("submit", function (e) {
+            e.preventDefault();
+            //collecting the form data
+            let formData = new FormData(e.target);
+            //checking username is already registered or not ?
+            let userAlreadyExist = false;
+            for (let i = 0; i < allSignUpDataArray.length; i++) {
+                let user = allSignUpDataArray[i];
+                if (user.email === formData.get("email")) {
+                    userAlreadyExist = true;
+                }
+            }
+            if (userAlreadyExist) {
+                alert("User Email is already exist..Please try with another Email");
+            } else {
+                //converting form data to the JavaScript object.
+                let obj = {};
+                formData.forEach(function (v, k) {
+                    obj[k] = v;
+                });
+                //appending the new user details to the localStorage
+                allSignUpDataArray.push(obj);
+                let allSignUpDataArrayJson =
+                    JSON.stringify(allSignUpDataArray);
+                localStorage.setItem("signupData",
+                    allSignUpDataArrayJson);
+                console.log(allSignUpDataArray);
+                alert("User Registered Sucessfully !");
+                formElement.reset();
+            }
+        });
+    </script>
+</body>
+
+</html>

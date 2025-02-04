@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            /* Margin from top and bottom 0, and from left and right auto */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+           
+        }
+
+        /* Sidebar and Main content layout */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sidebar {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .content {
+            flex: 2;
+        }
+
+        /* Sidebar Sections  */
+         .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+
+        .skills ul,
+        .education ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills ul li,
+        .education ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Main content Sections */
+        .job-title {
+            font-weight: bold;
+        }
+
+        .job-duration {
+            font-style: italic;
+            color: gray;
+        }
+
+        .skill-indicator {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            height: 10px;
+        }
+
+        .skill-level {
+            height: 100%;
+            background-color: #76c7c0;
+            /* Skill level color */
+            border-radius: 5px;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header Section-->
+        <div class="header">
+            <div class="info" >
+                <h1 >HIMANSHI</h1>
+                <p>Email: himanshikumar73@gmail.com</p>
+                <p>Phone: +91 93XXXXXX11</p>
+            </div>
+            <!-- <div class="photo"> -->
+                <!-- Placeholder for photo-->
+                <!-- <img src="" alt="Profile Photo" width="100px"> -->
+            <!-- </div> -->
+        </div>
+        <!-- Main Content Layout-->
+        <div class="main-content">  
+            <!-- Sidebar-->
+            <div class="sidebar">
+                <!-- Skills Section-->
+                <div class="skills">
+                    <h2 class="section-title">Skills</h2>
+                    <ul>
+                        <li>
+                            HTML & CSS
+                            <div class="skill-indicator">
+                                <div class="skill-level" style="width: 90%;"></div>
+
+                            </div>
+                        </li>
+                        <li>
+                            Python
+                            <div class="skill-indicator">
+                                <div class="skill-level" style="width: 80%;"></div>
+                            </div>
+                        </li>
+                        <li>
+                            JavaScript
+                            <div class="skill-indicator">
+                                <div class="skill-level" style="width: 60%;"></div>
+                            </div>
+                        </li>
+                        <li>
+                            React
+                            <div class="skill-indicator">
+                                <div class="skill-level" style="width: 20%;"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Education Section-->
+                <div class="education">
+                    <h2 class="section-title">Education</h2>
+                    <ul>
+                        <li><strong>Degree:</strong> Bachelor of Computer science engineering in AI (Pursuing)</li>
+                        <li><strong>Institution:</strong> Chitkara university</li>
+                        <li><strong>Year:</strong> First Year (2024)</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Main Content-->
+            <div class="content">
+                <!-- Experience Section-->
+                <div class="experience">
+                    <h2 class="section-title">Objective</h2>
+                  
+                    <div class="job">
+                        <div>A passionate first-year student with foundational knowledge in Python, HTML, and CSS. Seeking opportunities to learn, grow, and apply technical skills in real-world projects.</div>
+                    </div>
+                   
+                    
+                    
+                </div>
+                <div class="Hobbies">
+                    <h2 class="section-title">Hobbies & Interests
+                    </h2>
+                  
+                    <div class="job">
+                        <div>Exploring new programming languages and tools.
+                            Learning about web design and user interfaces.
+                            Problem-solving through coding challenges.</div>
+                   
+                    
+                    
+                </div>
+                <br>
+                <div class="project">
+                    <h2 class="section-title"> Projects</h2>
+                    
+                  
+                    <div><b>Personal Portfolio Website -</b>- A simple website built using HTML and CSS to showcase my projects and skills.</div>
+                   <div> <b>Weather Forecast App (Basic) -</b> A project to display current weather using HTML, CSS, and integrating with a weather API..</div>
+               
+                
+                
+            </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

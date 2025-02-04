@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App Footer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-links,
+        .footer-info,
+        .footer-contact {
+            flex: 1;
+            min-width: 220px;
+            /* Ensures columns remain usable */
+            margin: 10px;
+            box-sizing: border-box;
+            /* Include padding/margin in width */
+        }
+
+        .footer-links h3,
+        .footer-info h3,
+        .footer-contact h3 {
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+
+        .footer-links ul,
+        .footer-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li,
+        .footer-info li {
+            margin: 10px 0;
+        }
+
+        .footer-links a,
+        .footer-info a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover,
+        .footer-info a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 10px 0;
+            border-top: 1px solid #ecf0f1;
+        }
+
+        /* Flexbox naturally handles responsiveness */
+
+        /* for header */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav li {
+            margin: 0 15px;
+        }
+
+        .nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #3498db;
+            /* Light blue on hover */
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+        }
+
+        .search input {
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+        .search button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #3498db;
+            /* Button color */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search button:hover {
+            background-color: #2980b9;
+            /* Darker blue on hover */
+        }
+
+        .header-container {
+            flex-wrap: wrap;
+        }
+
+        .nav ul {
+            flex: 1;
+            /* Allow nav to grow */
+        }
+
+        .search {
+            flex: 1;
+            /* Allow search to grow */
+            max-width: 200px;
+            /* Limit width for search */
+        }
+
+        /* main content styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+
+            background-size: cover;
+            color: white;
+            align-items: center;
+            height: 100vh;
+            overflow: scroll;
+        }
+
+        .container {
+
+            width: 90%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .main-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .temp-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .temp-info .icon img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .temp-details h1 {
+            font-size: 48px;
+
+        }
+
+        .temp-details {
+            margin-top: 0px;
+        }
+
+        .temp-details p {
+            font-size: 16px;
+            color: #ecf0f1;
+        }
+
+        .status-highlights {
+            display: flex;
+            gap: 20px;
+            padding-top: 20px;
+        }
+
+        .status-highlights .highlight {
+            background-color: #444;
+
+            background-size: cover;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .status-highlights .highlight h2 {
+            color: #ecf0f1;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .status-highlights .highlight p {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .forecast {
+            background-color: #444;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            background-image: url(https://thumbs.dreamstime.com/b/blue-grey-shaded-abstract-blur-background-wallpaper-vector-illustration-colorful-abstract-blur-background-wallpaper-vector-155287945.jpg);
+            background-size: cover;
+
+        }
+
+        .forecast h2 {
+            margin-bottom: 20px;
+        }
+
+        .forecast-day {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .forecast-day:last-child {
+            border-bottom: none;
+        }
+
+        .weather-map {
+            background-image: url(https://img.freepik.com/premium-photo/world-map-with-weather-forecast-application-generative-ai_77190-12930.jpg);
+            background-size: cover;
+            color: #ecf0f1;
+
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .weather-map h2 {
+            margin-bottom: 20px;
+        }
+
+        .weather-map img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .status-highlights:hover {
+            opacity: 1;
+            /* Fade in */
+            transform: scale(1);
+            /* Grow to normal size */
+        }
+
+        #wind {
+            opacity: 1;
+            /* Fade in */
+            transform: scale(1);
+            /* Grow to normal size */
+        }
+
+        #uv {
+            opacity: 1;
+            /* Fade in */
+            transform: scale(1);
+            /* Grow to normal size */
+        }
+
+        #humidity {
+            opacity: 1;
+            /* Fade in */
+            transform: scale(1);
+            /* Grow to normal size */
+        }
+
+        #Visibility {
+            opacity: 1;
+            /* Fade in */
+            transform: scale(1);
+            /* Grow to normal size */
+        }
+
+        .temp-details {
+            height: 30px;
+            /* transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+            /* transform: scale(0.8);  */
+        }
+
+        .temp-details:hover {
+            opacity: 1;
+            /* Fade in */
+            transform: scale(1);
+            /* Grow to normal size */
+        }
+
+        .forecast {
+            transition: transform 0.4s ease, opacity 0.3s ease;
+            /* Smooth transition */
+            padding: 10px;
+
+            transform: scale(0.8);
+            margin-top: 80px;
+        }
+
+        .forecast:hover {
+            opacity: 1;
+            /* Fade in */
+            transform: scale(0.9);
+            /* Grow to normal size */
+        }
+
+        .weather-map {
+
+            transition: transform 0.4s ease, opacity 0.3s ease;
+            /* Smooth transition */
+
+            transform: scale(0.8);
+        }
+
+        .weather-map:hover {
+            opacity: 1;
+            /* Fade in */
+            transform: scale(0.9);
+            /* Grow to normal size */
+        }
+
+        .weather-map {
+            /* background-image: url(<canvas class="mapboxgl-canvas" tabindex="0" aria-label="Map" role="region" width="430" height="420" style="width: 430px; height: 420px;"></canvas>); */
+            position: relative;
+            height: 60vh;
+            width: 100%;
+
+        }
+
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            /* Ensure the video stays behind content */
+        }
+
+        video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            /* Bring content above the video */
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background for readability */
+            border-radius: 10px;
+        }
+
+        .video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            z-index: -1;
+            /* Ensure the video stays behind content */
+        }
+
+        #uv {
+            background-image: url(https://www.uvindex.app/images/sun-cartoon-icon.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .forecast-day img {
+            height: 40px;
+        }
+
+        @media (max-width: 768px) {
+
+            .forecast,
+            .status-highlights {
+                padding: 15px;
+                flex-direction: column;
+            }
+
+            .forecast-day p {
+                font-size: 14px;
+            }
+
+            .forecast-day img {
+                height: 30px;
+            }
+
+            .highlight {
+                max-width: 100%;
+                /* Take full width on smaller screens */
+            }
+
+            .temp-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 5px;
+            }
+
+            .logo h1 {
+                font-size: 1.5em;
+            }
+
+            .search {
+                width: 100%;
+                margin: 10px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-links,
+            .footer-info,
+            .footer-contact {
+                min-width: 100%;
+            }
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>Mausam</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../html/loginpage.html">Login</a></li>
+                    <li><a href="#">Forecast</a></li>
+                    <li><a href="../html/aboutus.html">About Us</a></li>
+                    <li><a href="#foot">Quick Links</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" placeholder="Search city...">
+                <button>Search</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Weather Information -->
+    <div class="container">
+        <div class="video-background">
+            <video autoplay muted loop>
+                <source src="../images/lightningvideo.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="main-info">
+            <div class="temp-info">
+                <div class="icon">
+                    <img src="../images/drizzle.png" alt="Weather Icon" width="100px" height="100px">
+                </div>
+                <br>
+                <div class="temp-details">
+                    <h1 style="color: #ecf0f1;">28°C</h1>
+                    <p>Rainy Storm Clouds</p>
+                    <p>Florida, US</p>
+                    <p>24 July, 2024 5:01 AM</p>
+                </div>
+            </div>
+            <div class="status-highlights">
+
+                <div class="highlight" id="wind">
+                    <div class="video">
+                        <video autoplay muted loop>
+                            <source src="https://videos.pexels.com/video-files/9769070/9769070-sd_640_360_30fps.mp4"
+                                type="video/mp4">
+                        </video>
+                    </div>
+                    <h2>Wind Status</h2>
+                    <p>7.90 km/h</p>
+                </div>
+                <div class="highlight" id="uv">
+                    <div class="video">
+                        <video autoplay muted loop>
+                            <source src="https://videos.pexels.com/video-files/5035637/5035637-sd_640_360_25fps.mp4"
+                                type="video/mp4">
+                        </video>
+                    </div>
+                    <h2>UV Index</h2>
+                    <p>5.50 uv</p>
+                </div>
+                <div class="highlight" id=humidity>
+                    <div class="video">
+                        <video autoplay muted loop>
+                            <source src="https://videos.pexels.com/video-files/6989287/6989287-hd_1920_1080_25fps.mp4"
+                                type="video/mp4">
+                        </video>
+                    </div>
+                    <h2>Humidity</h2>
+                    <p>84%</p>
+                </div>
+                <div class="highlight" id="Visibility">
+                    <div class="video">
+                        <video autoplay muted loop>
+                            <source src="https://videos.pexels.com/video-files/854748/854748-hd_1920_1080_30fps.mp4"
+                                type="video/mp4">
+                        </video>
+                    </div>
+                    <h2>Visibility</h2>
+                    <p>03 km</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7 Days Forecast -->
+        <div class="forecast">
+            <h2>4 Days Forecast</h2>
+            <div class="forecast-day">
+                <p>
+                    <img src="../images/drizzle.png">
+                    +29°C / +18°C
+                </p>
+                <p>25 July</p>
+                <p>Tuesday</p>
+            </div>
+            <div class="forecast-day">
+                <p>
+                    <img src="../images/drizzle.png">
+                    +21°C / +16°C
+                </p>
+                <p>26 July</p>
+                <p>Wednesday</p>
+            </div>
+            <div class="forecast-day">
+                <p>
+                    <img src="../images/drizzle.png">
+                    +24°C / +20°C
+                </p>
+                <p>27 July</p>
+                <p>Thursday</p>
+            </div>
+            <div class="forecast-day">
+                <p>
+                    <img src="../images/drizzle.png">
+                    +30°C / +17°C
+                </p>
+                <p>28 July</p>
+                <p>Friday</p>
+            </div>
+        </div>
+
+
+        <!-- Weather Condition Map -->
+        <div class="weather-map">
+            <h2>Weather Condition Map</h2>
+            <canvas class="mapboxgl-canvas" tabindex="0" aria-label="Map" role="region" width="430" height="420"
+                style="width: 430px; height: 420px;"></canvas>
+
+        </div>
+    </div>
+
+
+    <footer class="footer" id="foot">
+        <div class="footer-container">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="../html/faq.html">FAQs</a></li>
+                    <li><a href="../html/aboutus.html">About Us</a></li>
+                    <li><a href="../html/contactus.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h3>Stay Connected</h3>
+                <ul>
+                    <li><a href="#" id="facebook">Facebook</li>
+                    <li><a href="#" id="twitter">Twitter</a></li>
+                    <li><a href="#" id="Instagram">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:support@mausam.com">support@mausam.com</a></p>
+                <p>Phone: +91 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MAUSAM-Weather App. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Fetch weather data from an API (using OpenWeather as an example)
+
+        // We yet do not know how to use API, so this "if" condition will not work, hence it will show city not found.
+
+        const apiKey = "https://www.metaweather.com/api/location/44418/" // Example for London // Replace with your API key
+
+        // Function to fetch weather data
+        async function getWeather(city) {
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
+            const data = await response.json();
+            if (data.cod === 200) {
+                // Update the weather details on the page
+                document.querySelector('.temp-details h1').textContent = `${data.main.temp}°C`;
+                document.querySelector('.temp-details p').textContent = data.weather[0].description;
+                document.querySelector('.temp-details').innerHTML += `
+                    <p>${data.name}, ${data.sys.country}</p>
+                    <p>${new Date().toLocaleString()}</p>
+                `;
+                // Example for handling more details (wind, humidity, etc.)
+                document.querySelector('#wind p').textContent = `${data.wind.speed} km/h`;
+                document.querySelector('#humidity p').textContent = `${data.main.humidity}%`;
+            } else {
+                alert('Currently unavailable.');
+                reset(document.getElementsByClassName('search').value);
+            }
+        }
+
+        // Listen for the search button click
+        document.querySelector('.search button').addEventListener('click', () => {
+            const city = document.querySelector('.search input').value;
+            getWeather(city);
+        });
+
+        document.getElementById('facebook').addEventListener('click', function () {
+            alert('Currently unavailable.');
+        });
+        document.getElementById('twitter').addEventListener('click', function () {
+            alert('Currently unavailable.');
+        });
+        document.getElementById('Instagram').addEventListener('click', function () {
+            alert('Currently unavailable.');
+        });
+    </script>
+
+</body>
+
+</html>
